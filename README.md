@@ -15,7 +15,8 @@
 ## Порівняння методів кластеризації даних:
 
 ## Колаборативна фільтрація:
-
+![colaborative user-based.png](images/colaborative%20user-based.png)
+![colaborative item-based.png](images/colaborative%20item-based.png)
 ## Колаборативна фільтрація з кластерами / порівняння:
 
 ## Передбачення кількості прослуховувань:
