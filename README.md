@@ -16,6 +16,8 @@
       1. [Унікальні значення](#відношення-кількості-унікальних-значень)
       2. [Викиди](#викиди-1)
 4. [Аналіз даних](#покроковий-аналіз-даних)
+5. [Профілі користувачів](#створення-профілів-користувачів)
+    1. [Візуалізація профілів](#візуалізація-декількох-створених-профілів)
 5. [Кластеризація](#кластеризація-даних)
 6. [Порівняння методів кластеризації](#порівняння-методів-кластеризації-даних)
 7. [Колаборативна фільтрація](#колаборативна-фільтрація)
@@ -102,6 +104,13 @@ playcount       430        0.0044%
 * [Analysis of Features data](notebooks/0.%20Spotify%20Data%20Analysis%20%28EDA%29.ipynb)
 * [Analysis of Users data](notebooks/0.%20USERS_Spotify_Data_Analysis.ipynb)
 
+## Створення профілів користувачів:
+* [1. Creating and Visualizing User Profile.ipynb](notebooks/data-preprocessing/1.%20Creating%20and%20Visualizing%20User%20Profile.ipynb)
+* [1. (additional) hypothesis about profiles.ipynb](notebooks/data-preprocessing/1.%20%28additional%29%20hypothesis%20about%20profiles.ipynb)
+
+### Візуалізація декількох створених профілів
+![Візуалізація декількох створених профілів](images/user-profiles/user-profile-visualization.png)
+
 ## Кластеризація даних:
 
 ## Порівняння методів кластеризації даних:
@@ -109,7 +118,6 @@ playcount       430        0.0044%
 ## Колаборативна фільтрація:
 ![colaborative user-based.png](images/visualization/colaborative%20user-based.png)
 ![colaborative item-based.png](images/visualization/colaborative%20item-based.png)
-
 
 ## Колаборативна фільтрація з кластерами / порівняння:
 
