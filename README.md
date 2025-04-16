@@ -142,6 +142,10 @@ playcount       430        0.0044%
 ![Накладання значень характеристик різних кластерів](images/clustering/hier_chosen_overlapping.png)
 
 ## Порівняння методів кластеризації даних:
+![Відображення кластерів, створених за допомогою Kmeans метода](kmeans-clusters-visualization.png)
+
+![Відображення кластерів, створених за допомогою ієрархічного метода](images/clustering/hier-clusters-visualization.png)
+
 
 ## Колаборативна фільтрація:
 ![colaborative user-based.png](images/visualization/colaborative%20user-based.png)
