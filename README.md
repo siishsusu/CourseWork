@@ -20,6 +20,10 @@
     1. [Візуалізація профілів](#візуалізація-декількох-створених-профілів)
     2. [Візуалізація смаку користувача і порівняння з його профілем](#візуалізація-всіх-треків-які-слухав-випадковий-користувач-і-порівняння-з-його-профілем)
 5. [Кластеризація](#кластеризація-даних)
+   1. [Kmeans](#kmeans)
+      1. [Метод "ліктя"](#метод-ліктя)
+      2. [Обрання кількості кластерів](#обрання-оптимальної-кількості-кластерів)
+   2. [Ієрархічний метод (знизу - вгору)](#)
 6. [Порівняння методів кластеризації](#порівняння-методів-кластеризації-даних)
 7. [Колаборативна фільтрація](#колаборативна-фільтрація)
 8. [Колаборативна фільтрація з кластерами](#колаборативна-фільтрація-з-кластерами--порівняння)
@@ -106,8 +110,8 @@ playcount       430        0.0044%
 * [Analysis of Users data](notebooks/0.%20USERS_Spotify_Data_Analysis.ipynb)
 
 ## Створення профілів користувачів:
-* [1. Creating and Visualizing User Profile.ipynb](notebooks/data-preprocessing/1.%20Creating%20and%20Visualizing%20User%20Profile.ipynb)
-* [1. (additional) hypothesis about profiles.ipynb](notebooks/data-preprocessing/1.%20%28additional%29%20hypothesis%20about%20profiles.ipynb)
+* [Creating and Visualizing User Profile](notebooks/data-preprocessing/1.%20Creating%20and%20Visualizing%20User%20Profile.ipynb)
+* [Hypothesis about profiles](notebooks/data-preprocessing/1.%20%28additional%29%20hypothesis%20about%20profiles.ipynb)
 
 ### Візуалізація декількох створених профілів
 ![Візуалізація декількох створених профілів](images/user-profiles/user-profile-visualization.png)
@@ -116,6 +120,19 @@ playcount       430        0.0044%
 ![Візуалізація порівняння профілю користувача з його прослуханими треками](user_profile_overlapping.png)
 
 ## Кластеризація даних:
+* [Clasterization of User Profiles Kmeans](notebooks/clustering/2.%20Clasterization_of_User_Profiles_Kmeans.ipynb)
+* [Clasterization of User Profiles Hierarchical](notebooks/clustering/3.%20Clasterization_of_User_Profiles-Hierarchical.ipynb)
+* [Hypothesis about clusters](notebooks/clustering/2.3.%20%28additional%29%20hypothesis%20about%20clusters.ipynb)
+
+### Kmeans
+#### Метод "ліктя":
+![Метод "ліктя"](images/clustering/elbow_method.png)
+#### Обрання оптимальної кількості кластерів:
+![Перевірка різних кількостей k](images/clustering/diff-k-tryes.png)
+
+[Перейти до перегляду обраної кількості кластерів відображених на інтерактивній сфері](images/clustering/prospheras/kmeans_5_clusters.html)
+
+![Накладання значень характеристик різних кластерів](images/clustering/kmeans_chosen_overlapping.png)
 
 ## Порівняння методів кластеризації даних:
 
