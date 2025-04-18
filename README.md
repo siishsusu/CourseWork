@@ -134,7 +134,7 @@ playcount       430        0.0044%
 ![Візуалізація декількох створених профілів](images/user-profiles/user-profile-visualization.png)
 
 ### Візуалізація всіх треків, які слухав випадковий користувач і порівняння з його профілем
-![Візуалізація порівняння профілю користувача з його прослуханими треками](user_profile_overlapping.png)
+![Візуалізація порівняння профілю користувача з його прослуханими треками](images/clustering/user_profile_overlapping.png)
 
 ## Кластеризація даних:
 * [Clasterization of User Profiles Kmeans](notebooks/clustering/2.%20Clasterization_of_User_Profiles_Kmeans.ipynb)
@@ -277,9 +277,18 @@ def minkowski_distance(user_profile, track_row, p):
 
 З наведених вище графіків, видно, що найкращий результат на більшості експериментів був за використання Мангеттенської відстані. Отже, її і буде обрано для подальшої роботи.
 
-## Фільтрація базована на контенті з кластерами / порівняння:
-
 ## Порівняння колаборативної і базованої на контенті фільтрацій:
+* [Comparison of filtering techniques](notebooks/content-based/9.%20Comparison%20of%20filtering%20techniques.ipynb)
+
+Було проведено експеримент на 20 користувачах. Підібрано їм рекомендації обома підходами і порівняно відхилення від профілю даного користувача.
+
+![MAE](images/content-based/mae-comp.png)
+
+![MSE](images/content-based/mse-comp.png)
+
+![RMSE](images/content-based/rmse-comp.png)
+
+За результатами візуалізацій чітко видно, що рекомендації точніше на content-based фільтрації майже у всіх експериментах.
 
 ## Гібридний метод:
 
