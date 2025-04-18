@@ -209,10 +209,73 @@ playcount       430        0.0044%
 Можна зробити висновок, що втрати майже не відрізняються, проте рекомендації, отримані з даних користувачів лише одного кластеру трішки краще.
 
 ## Фільтрація базована на контенті:
+* [Automatization Content-Based Filtering Based on User Profiles](notebooks/content-based/6.%20Automatization%20Content-Based%20Filtering%20Based%20on%20User%20Profiles.ipynb)
+* [CONTENT-BASEDFILTER Comparison of recommendations](notebooks/content-based/7.%20CONTENT-BASEDFILTER%20Comparison%20of%20recommendations.ipynb)
 
 ## Порівняння різних метрик відстані:
+### Косинусна схожість:
+```python
+def cossine_similarity(user_profile:pd.DataFrame, songs_df:pd.DataFrame):
+  return np.dot(user_profile, songs_df) / (np.linalg.norm(user_profile) * np.linalg.norm(songs_df))
+```
+
+![Косинусна схожість візуалізація](images/content-based/coss-sim-vis.png)
+
+### Евклідова відстань:
+```python
+def euclidean_distance(user_profile, songs_df):
+    user_profile = np.asarray(user_profile)
+    songs_df = np.asarray(songs_df)
+    return np.sqrt(np.sum((user_profile - songs_df) ** 2))
+```
+![Евклідова відстань візуалізація](images/content-based/euclidean_distance-vis.png)
+
+### Кореляція Пірсона:
+```python
+def pearson_correlation(user_profile: pd.DataFrame, tracks_df: pd.DataFrame):
+    user_profile_series = user_profile.iloc[0].astype(float)
+
+    correlations = tracks_df.apply(lambda track: user_profile_series.corr(track.astype(float)), axis=1)
+    return correlations
+```
+![Кореляція Пірсона візуалізація](images/content-based/pearson_correlation-vis.png)
+
+### Мангеттенська відстань
+```python
+def manhattan_distance(user_profile, track_row):
+    user_profile = np.asarray(user_profile)
+    track_row = np.asarray(track_row)
+    return np.sum(np.abs(user_profile - track_row))
+```
+![Мангеттенська відстань візуалізація](images/content-based/manhattan_distance-vis.png)
+
+### Відстань Мінковського:
+```python
+def minkowski_distance(user_profile, track_row, p):
+    user_profile = np.asarray(user_profile)
+    track_row = np.asarray(track_row)
+    return np.sum(np.abs(user_profile - track_row) ** p) ** (1 / p)
+```
+
+![Відстань Мінковського p=3](images/content-based/minkowski_distance-3-vis.png)
+
+![Відстань Мінковського p=5](images/content-based/minkowski_distance-5-vis.png)
+
+![Відстань Мінковського p=10](images/content-based/minkowski_distance-10-vis.png)
 
 ## Вибір оптимальної метрики:
+* [CONTENT-BASEDFILTER best metric experiment](notebooks/content-based/8.%20CONTENT-BASEDFILTER%20best%20metric%20experiment.ipynb)
+
+Було проведено експеримент. Випадковим чином обрано 100 профілів користувачів і для кожного було підібрано рекомендації. Потім було порівняно кожен результат рекомендацій 
+з профілем користувача, обраховано похибки та відображено на графіку результати: 
+
+![MAE](images/content-based/mae.png)
+
+![MSE](images/content-based/mse.png)
+
+![RMSE](images/content-based/rmse.png)
+
+З наведених вище графіків, видно, що найкращий результат на більшості експериментів був за використання Мангеттенської відстані. Отже, її і буде обрано для подальшої роботи.
 
 ## Фільтрація базована на контенті з кластерами / порівняння:
 
