@@ -296,5 +296,42 @@ def minkowski_distance(user_profile, track_row, p):
 За результатами візуалізацій чітко видно, що рекомендації точніше на content-based фільтрації майже у всіх експериментах.
 
 ## Гібридний метод:
+* [HYBRID recommendations weighted](notebooks/hybrid/10.%20HYBRID%20recommendations%20weighted.ipynb)
+* [HYBRID recommendations weighted 2.0](notebooks/hybrid/10.1.%20HYBRID%20recommendations%20weighted.ipynb)
+* [Two hybrid approaches comparison](notebooks/hybrid/10.2.%20two%20hybrid%20approaches%20comparison.ipynb)
+
+### Перший підхід:
+
+```text
+{
+   'mae': 0.050752743705712096,
+   'mse': 0.008581838939514422,
+   'rmse': 0.0926382153299297
+}
+```
+
+![Перший підхід](images/hybrid/hyb-first.png)
+
+### Другий підхід:
+
+```text
+{
+    'mae': 0.07216454499847184,
+    'mse': 0.012760890589057881,
+    'rmse': 0.11296411195179591
+}
+```
+
+![Другий підхід](images/hybrid/hyb-second.png)
+
+### Порівняння:
+
+![MAE](images/hybrid/comp-mae.png)
+
+![MSE](images/hybrid/comp-mse.png)
+
+![RMSE](images/hybrid/comp-rmse.png)
+Отже, кращий другий підхід.
+
 
 [Повернутися на початок](#розробка-системи-рекомендацій-на-основі-аналізу-даних-spotify)
