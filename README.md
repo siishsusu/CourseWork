@@ -331,7 +331,7 @@ def minkowski_distance(user_profile, track_row, p):
 ![MSE](images/hybrid/comp-mse.png)
 
 ![RMSE](images/hybrid/comp-rmse.png)
-Отже, кращий другий підхід.
+Отже, кращий перший підхід.
 
 
 [Повернутися на початок](#розробка-системи-рекомендацій-на-основі-аналізу-даних-spotify)
