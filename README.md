@@ -170,6 +170,7 @@ playcount       430        0.0044%
 
 ## Колаборативна фільтрація:
 * [Collaborative Filtering User To User Without Clusters](notebooks/collaborative-filtering/4.%20Collaborative%20Filtering%20User%20To%20User%20Without%20Clusters.ipynb)
+* [Collaborative Filtering Manhattan and Cosine Comparison](notebooks/collaborative-filtering/4.%20Collaborative%20Filtering%20Manhattan%20and%20Cosine%20Comparisson.ipynb)
 
 ### Створення матриці користувач-трек:
 ![Матриця користувач-трек](images/col-filtering/user-track-matrix.png)
