@@ -196,6 +196,7 @@ playcount       430        0.0044%
 
 ## Колаборативна фільтрація з кластерами / порівняння:
 * [Collaborative Filtering User To User With Clusters + Comparison](notebooks/collaborative-filtering/4.%20Collaborative%20Filtering%20User%20To%20User%20With%20Clusters%20%2B%20Comparisson.ipynb)
+* [Comparison of with and without clusters approaches](notebooks/collaborative-filtering/4.%20Comparison%20of%20with%20and%20without%20clusters%20approaches.ipynb)
 
 ### Датасети-матриці користувач-трек, створені на основі кластерів:
 ![Датасети](images/col-filtering/datasets-clustered.png)
